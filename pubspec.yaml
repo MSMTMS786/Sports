@@ -39,6 +39,7 @@ dependencies:
   flutter_custom_tabs: ^2.1.0
   image_picker: ^0.8.4+11
   shared_preferences: ^2.3.2
+  url_launcher: ^6.0.20
   
   
 

@@ -66,7 +66,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
         ),
         child: ListView(
-          padding: EdgeInsets.zero,
+         
+        
           children: <Widget>[
             DrawerHeader(
               decoration: const BoxDecoration(
@@ -110,12 +111,33 @@ class _MyDrawerState extends State<MyDrawer> {
                 Navigator.pop(context);
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Colors.white),
-              title: const Text('Logout', style: TextStyle(color: Colors.white)),
+            GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.(context);
               },
+              child: ListTile(
+                leading: const Icon(Icons.info, color: Colors.white),
+                title: const Text('info', style: TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.35),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Material(
+                borderRadius: BorderRadius.circular(10),
+                elevation: 10,
+                
+                child: ListTile(
+                  
+                    title: const Text('     3Degree786@gmail.com', style: TextStyle(fontSize: 18,color: Colors.black54)),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+              ),
             ),
           ],
         ),

@@ -1,9 +1,7 @@
-
-
 import 'package:all_sports/constants/links.dart';
 import 'package:all_sports/screens/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:url_launcher/url_launcher.dart'; // Using url_launcher to remove URL bar and share button
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -11,8 +9,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,14 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
           children: [
-            buildLiveStreamButton(context, urlWillo, "images/willow.png", "Willow"),
+            buildLiveStreamButton(context, urlWillo, imgWillow, "Willow"),
             buildLiveStreamButton(context, urlTNT1, "images/TNT1.png", "TNT1"),
             buildLiveStreamButton(context, urlSony, "images/Sony.png", "Sony"),
             buildLiveStreamButton(context, urlStarSports1, "images/Star1.png", "Star Sports 1"),
             buildLiveStreamButton(context, urlAstro, "images/Astro.png", "Astro Cricket"),
-            buildLiveStreamButton(context, urlAbuDhabiFootbal, "images/f1.png", "Footbal 1"),
-            buildLiveStreamButton(context, urlalfasportFootbal2, "images/footbal2.png", "Footbal 2"),
-            buildLiveStreamButton(context, urlBahrainFootbal3, "images/footbal3.png", "Footbal 3"),
+            buildLiveStreamButton(context, urlMUTV, "images/f1.png", "Football 1"),
+            buildLiveStreamButton(context, urlRealMadrid, "images/f2.png", "Football 2"),
+            buildLiveStreamButton(context, urlAbuDhabiFootbal, "images/f3.png", "Football 3"),
+            buildLiveStreamButton(context, urlalfasportFootbal2, "images/f4.png", "Football 4"),
+            buildLiveStreamButton(context, urlBahrainFootbal3, "images/f5.png", "Football 5"),
+            buildLiveStreamButton(context, urlPtvSports, "images/PTVSports.png", "PTV Sports"),
+            buildLiveStreamButton(context, urlTLTislamic, "images/TLTislamic.png", "Islamic"),
             buildLiveStreamButton(context, urlAbuDhabiWrestling, "images/wres1.jpg", "Wrestling 1"),
             buildLiveStreamButton(context, urlCombateGlobalWrestling2, "images/wres2.png", "Wrestling 2"),
             buildLiveStreamButton(context, urlAfrosportNigeria, "images/advanture.png", "Adventure"),
@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             buildLiveStreamButton(context, urlAfrosportNigeria, "images/Afro.png", "Afro Sport"),
             buildLiveStreamButton(context, urlAtgsports, "images/ATG.png", "ATG Sport"),
             buildLiveStreamButton(context, urlCBSsportsUSA, "images/cbs.png", "CBS Sport"),
+            buildLiveStreamButton(context, urlDDSports, "images/DDSports.png", "DD Sports"),
           ],
         ),
       ),
@@ -74,11 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Container(
                 height: 90,
-                child: Image.asset(imagePath, fit: BoxFit.contain)),
-            
-              
-              Text(label, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            // Icon(Icons.play_arrow, size: 20, color: Colors.red,),
+                child: Image.asset(imagePath, fit: BoxFit.contain),
+              ),
+              Text(
+                label,
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ),
@@ -87,21 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> _launchUrl(BuildContext context, String url) async {
-    final theme = Theme.of(context);
     try {
-      await launchUrl(
-        Uri.parse(url),
-        customTabsOptions: CustomTabsOptions(
-          shareState: CustomTabsShareState.on,
-          urlBarHidingEnabled: true,
-          showTitle: false,
-        ),
-        safariVCOptions: SafariViewControllerOptions(
-          preferredBarTintColor: theme.colorScheme.surface,
-          preferredControlTintColor: theme.colorScheme.onSurface,
-          barCollapsingEnabled: true,
-          entersReaderIfAvailable: false,
-        ),
+      await launch(
+        url,
+        forceWebView: true,  // Force WebView instead of browser
+        enableJavaScript: true, // Enable JavaScript for better experience
+        forceSafariVC: true, // Keep this for iOS
       );
     } catch (e) {
       debugPrint(e.toString());

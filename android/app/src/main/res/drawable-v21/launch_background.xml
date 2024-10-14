@@ -8,5 +8,9 @@
         <bitmap
             android:gravity="center"
             android:src="@mipmap/launch_image" />
+        <bitmap
+            android:gravity="center"
+            cololr="#006887"
+            android:text="Misbah Ur Rehman" />
     </item> -->
 </layer-list>

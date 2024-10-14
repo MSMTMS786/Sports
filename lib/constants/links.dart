@@ -19,3 +19,18 @@ const String urlSnokersports = "https://9769bd6405b245ea9adca1889a0b491b.mediata
 const String urlAfrosportNigeria = "https://newproxy3.vidivu.tv/vidivu_afrosport/index.m3u8";
 const String urlAtgsports = "https://httpcache0-00688-cacheliveedge0.dna.qbrick.com/00688-cacheliveedge0/out/u/atg_sdi_1_free.m3u8";
 const String urlCBSsportsUSA = "http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8";
+const String urlDDSports = "http://103.199.161.254/Content/ddsports/Live/Channel(DDSPORTS)/Stream(02)/index.m3u8";
+const String urlRealMadrid="https://rmtv-canela.amagi.tv/playlist720-p.m3u8";
+const String urlMUTV="https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c1a535c8/eu-west-1/eu-west-1/6058004203001/profile_1/chunklist.m3u8";
+const String urlTLTislamic="http://cdn.live247stream.com/thelight/tv/playlist.m3u8";
+const String urlPtvSports="http://175.107.244.52:4457/play/a08g/index.m3u8";
+
+
+
+// const String urlATNFootball="https://d10rltuy0iweup.cloudfront.net/ATNNAT/myStream/playlist.m3u8";
+// const String urlTV85="https://hw1.jemtv.com/app/tv85/chunks.m3u8";
+const String urlRTASportsBycycling="https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c1a535c8/eu-west-1/eu-west-1/6058004203001/profile_1/chunklist.m3u8";
+
+
+
+const String imgWillow = "images/willow.png";

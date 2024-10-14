@@ -1,8 +1,8 @@
-import 'package:all_sports/homescreen.dart';
+import 'package:all_sports/screens/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
+late Size mq;
 void main() {
   runApp(MyApp());
 }
@@ -12,11 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Set the system navigation bar color to black
     // ignore: prefer_const_constructors
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.purpleAccent, // Set navigation bar color
-      systemNavigationBarIconBrightness: Brightness.light, // Set icons to light (white)
-      statusBarColor: Colors.transparent, // Make status bar transparent if needed
-    ));
+    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
@@ -26,7 +22,7 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       //    // Set scaffold background to black
         
-      //   colorScheme: const ColorScheme.light(), // Use a dark color scheme
+      //   colorScheme: const ColorScheme.dark(), // Use a dark color scheme
       // ),
       home: MyHomePage(),
     );
