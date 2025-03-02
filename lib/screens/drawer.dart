@@ -54,12 +54,15 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      
       child: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blueAccent,
-              Colors.purpleAccent,
+              Color(0xff00ff00),
+              Color.fromARGB(0, 17, 108, 10),
+              
+             
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,

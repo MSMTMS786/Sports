@@ -25,6 +25,11 @@ const String urlMUTV="https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c
 const String urlTLTislamic="http://cdn.live247stream.com/thelight/tv/playlist.m3u8";
 const String urlPtvSports="http://175.107.244.52:4457/play/a08g/index.m3u8";
 
+const String urlSports18Hindi="https://crichype.fun/p/?id=18";
+const String urlPrimeHindi="https://crichype.fun/p3/?id=PrimeHindi";
+const String urlPrimeEnglish="https://crichype.fun/p3/?id=Prime";
+const String urlPrimeSports="https://shz.al/~Khel-Box-prime.html";
+
 
 
 // const String urlATNFootball="https://d10rltuy0iweup.cloudfront.net/ATNNAT/myStream/playlist.m3u8";
